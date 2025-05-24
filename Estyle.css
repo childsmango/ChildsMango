@@ -1,0 +1,128 @@
+
+/* Reset and base styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+  background-color: #fdfcfb;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Header styling */
+header {
+  background: linear-gradient(to right, #4caf50, #81c784);
+  color: white;
+  padding: 30px 20px;
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+/* Description Section */
+.description {
+  max-width: 850px;
+  margin: 40px auto;
+  padding: 30px;
+  background: #f0f8f4;
+  border-left: 5px solid #66bb6a;
+  border-radius: 8px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  font-size: 1.2rem;
+  color: #2e7d32;
+}
+
+.desc-block {
+  margin-bottom: 25px;
+}
+
+.desc-block h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: #388e3c;
+  border-bottom: 2px solid #c8e6c9;
+  padding-bottom: 5px;
+}
+
+
+/* Gallery section */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+  padding: 40px 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.gallery-item {
+  background: #ffffff;
+  border: 1px solid #c8e6c9;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.gallery-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.1);
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.caption {
+  padding: 15px;
+  text-align: center;
+  font-weight: bold;
+  color: #388e3c;
+  background-color: #f1f8e9;
+}
+
+/* Contact & map link sections */
+.contact, .map-link {
+  background-color: #e8f5e9;
+  padding: 40px 25px;
+  text-align: center;
+  max-width: 850px;
+  margin: 40px auto;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+.contact h2, .map-link h2 {
+  color: #2e7d32;
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+}
+
+.contact p, .map-link p {
+  margin: 10px 0;
+  font-size: 1.15rem;
+}
+
+.map-link a {
+  color: #1b5e20;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+/* Footer styling */
+footer {
+  background: #4caf50;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  font-size: 1rem;
+  margin-top: 40px;
+}

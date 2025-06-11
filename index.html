@@ -23,13 +23,16 @@
       font-size: 2em;
       width: 100%;
       display: flex;
-      justify-content: space-between;
+      justify-content: center;
       align-items: center;
       padding: 20px;
     }
     header img {
-      width: 50px;  /* Logo size */
+      width: 60px;  /* Logo size */
       height: auto;
+      border-radius: 10%;
+      border: 5px solid #fff; /* Hexagonal border for logo */
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     }
     .main-container {
       display: flex;
@@ -37,6 +40,7 @@
       width: 80%;
       margin-top: 20px;
       margin-bottom: 20px;
+      align-items: center;
     }
     .image-container {
       width: 45%;   /* Image width reduced */
@@ -88,9 +92,9 @@
 <body>
   <header>
     <img src="../ChildsMango/Banganapale3.jpeg" alt="Logo">  <!-- Placeholder for logo -->
-    ChildsMango - Organic Mangos
+    ChildsMango - An Organic Mango Farm
   </header>
-  
+
   <div class="main-container">
     <div class="image-container">
       <img src="../ChildsMango/Name.jpeg" alt="Farm">
@@ -104,14 +108,14 @@
       <p>Visit our farm and pick the mangoes you’d love to take home!</p>
     </section>
   </div>
-  
+
   <nav>
     <a href="farming_practices.html">Farming Practices</a> |
     <a href="contact.html">Contact</a> |
     <a href="pay.html">Payment</a> |
     <a href="feedback.html">Feedback</a>
   </nav>
-  
+
   <footer>&copy; 2025 ChildsMango. All Rights Reserved.</footer>
 </body>
 </html>

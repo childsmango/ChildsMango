@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -39,8 +38,9 @@
       margin: 20px 0;
     }
     .image-container img {
-      width: 80%;
-      height: auto;
+      width: 100%;   /* Make the image width 100% of the parent container */
+      height: auto;  /* Maintain aspect ratio */
+      max-width: 800px;  /* Limit the maximum size of the image */
       border-radius: 10px;
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     }
@@ -68,7 +68,7 @@
 <body>
   <header>ChildsMango - An Organic Mango Farm</header>
   <div class="image-container">
-    <img src="../ChildsMango/Name.jpeg" alt="Farm">
+    <img src="../ChildsMango/Farm.jpeg" alt="Farm">
   </div>
   <section class="description">
     <h3>About Us</h3>

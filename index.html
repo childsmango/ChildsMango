@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,6 +11,9 @@
       background-color: #f4f4f4;
       margin: 0;
       padding: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
     header {
       background-color: #1f9b4b;
@@ -19,13 +21,41 @@
       text-align: center;
       padding: 20px 0;
       font-size: 2em;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px;
+    }
+    header img {
+      width: 50px;  /* Logo size */
+      height: auto;
+    }
+    .main-container {
+      display: flex;
+      justify-content: space-between;
+      width: 80%;
+      margin-top: 20px;
+      margin-bottom: 20px;
+    }
+    .image-container {
+      width: 45%;   /* Image width reduced */
+      margin-right: 20px;
+    }
+    .image-container img {
+      width: 100%;   /* Make the image width 100% of the container */
+      height: auto;  /* Maintain aspect ratio */
+      border-radius: 15px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+      border: 5px solid #1f9b4b;
     }
     .description {
       background-color: #eaf5e1;
-      margin: 20px;
+      margin: 0 20px;
       padding: 20px;
       border-radius: 10px;
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      width: 50%;   /* Ensuring text fits comfortably next to the image */
     }
     .description h3 {
       color: #1f9b4b;
@@ -33,18 +63,6 @@
     .description p {
       font-size: 1.1em;
       color: #333;
-    }
-    .image-container {
-      text-align: center;
-      margin: 20px 0;
-    }
-    .image-container img {
-      width: 100%;   /* Make the image width 100% of the parent container */
-      height: auto;  /* Maintain aspect ratio */
-      max-width: 600px;  /* Limit the maximum size of the image */
-      border-radius: 15px;
-      box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
-      border: 5px solid #1f9b4b;  /* Border effect added */
     }
     nav {
       text-align: center;
@@ -68,24 +86,32 @@
   </style>
 </head>
 <body>
-  <header>ChildsMango - An Organic Mango Farm</header>
-  <div class="image-container">
-     <img src="../ChildsMango/Farm.jpg" alt="Farm">
+  <header>
+    <img src="../ChildsMango/Banganapale3.jpeg" alt="Logo">  <!-- Placeholder for logo -->
+    ChildsMango - An Organic Mango Farm
+  </header>
+  
+  <div class="main-container">
+    <div class="image-container">
+      <img src="../ChildsMango/Farm.jpg" alt="Farm">
+    </div>
+    <section class="description">
+      <h3>About Us</h3>
+      <p>We are dedicated to growing premium organic mangoes in Thanjavur, Tamil Nadu, using time-tested, nature-friendly methods that respect the soil and environment.</p>
+      <h3>Our Promise</h3>
+      <p>Each bite supports your health and the planet.</p>
+      <h3>Visit Us</h3>
+      <p>Visit our farm and pick the mangoes you’d love to take home!</p>
+    </section>
   </div>
-  <section class="description">
-    <h3>About Us</h3>
-    <p>We are dedicated to growing premium organic mangoes in Thanjavur, Tamil Nadu, using time-tested, nature-friendly methods that respect the soil and environment.</p>
-    <h3>Our Promise</h3>
-    <p>Each bite supports your health and the planet.</p>
-    <h3>Visit Us</h3>
-    <p>Visit our farm and pick the mangoes you’d love to take home!</p>
-  </section>
+  
   <nav>
     <a href="farming_practices.html">Farming Practices</a> |
     <a href="contact.html">Contact</a> |
     <a href="pay.html">Payment</a> |
     <a href="feedback.html">Feedback</a>
   </nav>
+  
   <footer>&copy; 2025 ChildsMango. All Rights Reserved.</footer>
 </body>
 </html>

@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -114,6 +115,12 @@
       transform: scale(1.1); /* Slight zoom effect on hover */
     }
 
+    /* Fix for ensuring visibility */
+    .back-home-container {
+      margin-top: 50px; /* Add margin for space above the button */
+      text-align: center; /* Center the Back to Home button */
+    }
+
     @keyframes fadeIn {
       0% { opacity: 0; }
       100% { opacity: 1; }
@@ -147,7 +154,9 @@
   </section>
 
   <!-- Back to Home Button -->
-  <a class="back-home" href="index.html">Back to Home</a>
+  <div class="back-home-container">
+    <a class="back-home" href="index.html">Back to Home</a>
+  </div>
 
   <footer>&copy; 2025 ChildsMango. All Rights Reserved.</footer>
 </body>

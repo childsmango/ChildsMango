@@ -3,7 +3,6 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ChildsMango - Gallery</title>
   <link rel="stylesheet" href="Estyle.css">
   <style>
@@ -15,7 +14,9 @@
       display: flex;
       flex-direction: column;
       align-items: center;
+      min-height: 100vh;
     }
+
     header {
       background-color: #1f9b4b;
       color: white;
@@ -27,6 +28,7 @@
       justify-content: center;
       align-items: center;
     }
+
     header img {
       width: 60px;  /* Logo size */
       height: auto;
@@ -37,6 +39,7 @@
       left: 10px; /* Positioning logo to the left */
       clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%); /* Hexagonal border */
     }
+
     .gallery-container {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
@@ -44,20 +47,26 @@
       width: 80%;
       margin-top: 20px;
     }
+
     .gallery-item {
       position: relative;
       overflow: hidden;
       border-radius: 15px;
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     }
+
     .gallery-item img {
       width: 100%;
-      height: auto;
-      transition: transform 0.3s ease;
+      height: 300px; /* Fixed height for uniformity */
+      object-fit: cover; /* Ensures the image fills the area without distortion */
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
+
     .gallery-item:hover img {
-      transform: scale(1.1);
+      transform: scale(1.05); /* Zoom effect on hover */
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.2); /* Box shadow on hover */
     }
+
     .description {
       position: absolute;
       bottom: 10px;
@@ -68,16 +77,19 @@
       font-size: 1.1em;
       border-radius: 5px;
     }
+
     nav {
       text-align: center;
       margin-top: 20px;
     }
+
     nav a {
       text-decoration: none;
       color: #1f9b4b;
       font-weight: bold;
       margin: 0 15px;
     }
+
     footer {
       background-color: #1f9b4b;
       color: white;
@@ -87,6 +99,28 @@
       width: 100%;
       bottom: 0;
     }
+
+    /* Back to Home button styling */
+    .back-home {
+      text-decoration: none;
+      color: #fff;
+      font-weight: bold;
+      margin-top: 30px;
+      display: inline-block;
+      padding: 15px 25px;
+      border-radius: 5px;
+      background-color: #1f9b4b;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      transition: all 0.3s ease;
+      font-size: 1.2em;
+      margin-bottom: 30px;
+    }
+
+    .back-home:hover {
+      background-color: #5cb85c;
+      transform: scale(1.1); /* Slight zoom effect on hover */
+    }
+
   </style>
 </head>
 <body>
@@ -109,34 +143,37 @@
     <!-- Example Image 3 -->
     <div class="gallery-item">
       <img src="../ChildsMango/Banganapale3.jpeg" alt="Farm Image 3">
-      <div class="description">Organic Mango Trees</div>
+      <div class="description">Organic Mangoes</div>
     </div>
     <!-- Add more images here -->
     <div class="gallery-item">
-      <img src="../ChildsMango/Banganapale_Shelf.jpeg" alt="Farm Image 1">
-      <div class="description">Farm Fresh Mangoes</div>
-    </div>
-    <div class="gallery-item">
       <img src="../ChildsMango/Mangotree1.jpeg" alt="Farm Image 1">
-      <div class="description">Farm Fresh Mangoes</div>
+      <div class="description">Banganapalle Tree</div>
     </div>
     <div class="gallery-item">
       <img src="../ChildsMango/Mangotree2.jpeg" alt="Farm Image 1">
-      <div class="description">Farm Fresh Mangoes</div>
+      <div class="description">Bangalora Tree</div>
     </div>
     <div class="gallery-item">
       <img src="../ChildsMango/Mangotree3.jpeg" alt="Farm Image 1">
-      <div class="description">Farm Fresh Mangoes</div>
+      <div class="description">Banganapalle Tree</div>
+    </div>
+    <div class="gallery-item">
+      <img src="../ChildsMango/Banganapale_Shelf.jpeg" alt="Farm Image 1">
+      <div class="description">Mango Shelf</div>
+    </div>
+    <div class="gallery-item">
+      <img src="../ChildsMango/Garden.jpeg" alt="Farm Image 1">
+      <div class="description">Garden</div>
+    </div>
+    <div class="gallery-item">
+      <img src="../ChildsMango/Mangotree4.jpeg" alt="Farm Image 1">
+      <div class="description">Imam Pasand Tree</div>
     </div>
   </div>
 
-  <nav>
-    <a href="index.html">Home</a> |
-    <a href="farming_practices.html">Farming Practices</a> |
-    <a href="contact.html">Contact</a> |
-    <a href="pay.html">Payment</a> |
-    <a href="feedback.html">Feedback</a>
-  </nav>
+  <!-- Back to Home Button -->
+  <a class="back-home" href="index.html">Back to Home</a>
 
   <footer>&copy; 2025 ChildsMango. All Rights Reserved.</footer>
 </body>

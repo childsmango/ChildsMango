@@ -1,22 +1,151 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <title>Contact Us - ChildsMango</title>
   <link rel="stylesheet" href="Estyle.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background-image: url('path/to/your/background-image.jpg'); /* Optional background image */
+      background-size: cover;
+      background-position: center;
+      min-height: 100vh;
+      color: #333;
+    }
+
+    header {
+      background-color: #1f9b4b;
+      color: white;
+      text-align: center;
+      padding: 20px 0;
+      font-size: 2em;
+      width: 100%;
+    }
+
+    section {
+      background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white background */
+      margin-top: 50px;
+      padding: 30px;
+      border-radius: 15px;
+      width: 80%;
+      max-width: 700px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+      animation: fadeIn 1s ease-out; /* Fade-in animation */
+    }
+
+    section p {
+      font-size: 1.2em;
+      margin: 10px 0;
+      display: flex;
+      align-items: center;
+    }
+
+    section p strong {
+      margin-right: 10px;
+      color: #1f9b4b;
+    }
+
+    section p a {
+      color: #1f9b4b;
+      text-decoration: none;
+      transition: color 0.3s ease, transform 0.3s ease;
+    }
+
+    section p a:hover {
+      color: #333;
+      transform: scale(1.05); /* Slight zoom effect on hover */
+    }
+
+    section p a:focus {
+      outline: none;
+      border-bottom: 2px solid #1f9b4b; /* Focus outline for accessibility */
+    }
+
+    /* Icons for each contact detail */
+    .icon {
+      margin-right: 10px;
+      width: 30px;
+      height: 30px;
+      transition: transform 0.3s ease;
+    }
+
+    .icon:hover {
+      transform: rotate(360deg); /* Rotate effect on hover */
+    }
+
+    footer {
+      margin-top: 50px;
+      text-align: center;
+      padding: 10px;
+      background-color: #1f9b4b;
+      color: white;
+      position: fixed;
+      width: 100%;
+      bottom: 0;
+    }
+
+    /* Back to Home link styling */
+    a {
+      text-decoration: none;
+      color: #1f9b4b;
+      font-weight: bold;
+      margin-top: 20px;
+      display: inline-block;
+      padding: 10px 20px;
+      border-radius: 5px;
+      background-color: #fff;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      transition: all 0.3s ease;
+    }
+
+    a:hover {
+      background-color: #1f9b4b;
+      color: white;
+      transform: scale(1.1); /* Slight zoom effect on hover */
+    }
+
+    @keyframes fadeIn {
+      0% { opacity: 0; }
+      100% { opacity: 1; }
+    }
+  </style>
 </head>
 <body>
   <header>Contact Us - ChildsMango</header>
+
   <section>
     <p><strong>Name:</strong> M. Suhasini</p>
     <p><strong>Name:</strong> M/o. M.S.Nettra</p>
     <p><strong>Farm:</strong> Senthil Aandavar Solai</p>
     <p><strong>Location:</strong> Naduvur, Thanjavur, Tamilnadu, India</p>
-    <p><strong>Contact:</strong> +91-9944663300 / 9626487391</p>
-    <p><strong>WhatsApp:</strong> <a href="https://wa.me/9944663300" target="_blank">+91 9944663300</a></p>
-    <p><strong>Email:</strong> <a href="mailto:SAS@gmail.com">SAS@gmail.com</a></p>
-    <p><strong>Google Maps:</strong> <a href="https://g.co/kgs/6z6rf4B" target="_blank">Visit us on Google Maps</a></p>
+    <p><strong>Contact:</strong> 
+      <img class="icon" src="path/to/phone-icon.png" alt="Phone Icon">
+      +91-9944663300 / 9626487391
+    </p>
+    <p><strong>WhatsApp:</strong> 
+      <img class="icon" src="path/to/whatsapp-icon.png" alt="WhatsApp Icon">
+      <a href="https://wa.me/9944663300" target="_blank">+91 9944663300</a>
+    </p>
+    <p><strong>Email:</strong> 
+      <img class="icon" src="path/to/email-icon.png" alt="Email Icon">
+      <a href="mailto:SAS@gmail.com">SAS@gmail.com</a>
+    </p>
+    <p><strong>Google Maps:</strong> 
+      <img class="icon" src="path/to/maps-icon.png" alt="Maps Icon">
+      <a href="https://g.co/kgs/6z6rf4B" target="_blank">Visit us on Google Maps</a>
+    </p>
   </section>
+
   <a href="index.html">Back to Home</a>
+
+  <footer>&copy; 2025 ChildsMango. All Rights Reserved.</footer>
 </body>
 </html>

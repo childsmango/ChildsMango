@@ -27,21 +27,25 @@
       justify-content: center;
       align-items: center;
       padding: 20px;
+      position: relative; /* For logo positioning */
     }
     header img {
       width: 60px;  /* Logo size */
       height: auto;
       border-radius: 10%;
-      border: 5px solid #fff; /* Hexagonal border for logo */
+      border: 5px solid #1f9b4b; /* Hexagonal border for logo */
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+      position: absolute;
+      left: 10px; /* Positioning logo to the left */
+      clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%); /* Hexagonal border */
     }
     .main-container {
       display: flex;
-      justify-content: space-between;
+      justify-content: center;
+      align-items: center;
       width: 80%;
       margin-top: 20px;
       margin-bottom: 20px;
-      align-items: center;
     }
     .image-container {
       width: 45%;   /* Image width reduced */
@@ -53,6 +57,10 @@
       border-radius: 15px;
       box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
       border: 5px solid #1f9b4b;
+      transition: transform 0.3s ease;
+    }
+    .image-container img:hover {
+      transform: scale(1.1);  /* Zoom effect on hover */
     }
     .description {
       background-color: #eaf5e1;
@@ -114,7 +122,8 @@
     <a href="farming_practices.html">Farming Practices</a> |
     <a href="contact.html">Contact</a> |
     <a href="pay.html">Payment</a> |
-    <a href="feedback.html">Feedback</a>
+    <a href="feedback.html">Feedback</a> |
+    <a href="gallery.html">Gallery</a>
   </nav>
 
   <footer>&copy; 2025 ChildsMango. All Rights Reserved.</footer>

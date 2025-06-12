@@ -1,8 +1,8 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contact Us - ChildsMango</title>
   <link rel="stylesheet" href="Estyle.css">
   <style>
@@ -39,6 +39,7 @@
       max-width: 700px;
       box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
       animation: fadeIn 1s ease-out; /* Fade-in animation */
+      flex-grow: 1; /* Allow the section to grow and fill available space */
     }
 
     section p {
@@ -89,8 +90,8 @@
       padding: 10px;
       background-color: #1f9b4b;
       color: white;
-      position: fixed;
       width: 100%;
+      position: sticky;
       bottom: 0;
     }
 
@@ -115,10 +116,14 @@
       transform: scale(1.1); /* Slight zoom effect on hover */
     }
 
-    /* Fix for ensuring visibility */
-    .back-home-container {
-      margin-top: 50px; /* Add margin for space above the button */
-      text-align: center; /* Center the Back to Home button */
+    /* Ensure the body fills the screen and content doesn't overflow */
+    .content-wrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      min-height: 100vh;
+      width: 100%;
     }
 
     @keyframes fadeIn {
@@ -128,36 +133,36 @@
   </style>
 </head>
 <body>
-  <header>Contact Us - ChildsMango</header>
+  <div class="content-wrapper">
+    <header>Contact Us - ChildsMango</header>
 
-  <section>
-    <p><strong>Name:</strong> M. Suhasini</p>
-    <p><strong>Mother's Name:</strong> M/o. M.S.Nettra</p>
-    <p><strong>Farm:</strong> Senthil Aandavar Solai</p>
-    <p><strong>Location:</strong> Naduvur, Thanjavur, Tamilnadu, India</p>
-    <p><strong>Contact:</strong> 
-      <img class="icon" src="../ChildsMango/phone.png" alt="Phone Icon">
-      +91-9944663300 / 9626487391
-    </p>
-    <p><strong>WhatsApp:</strong>
-      <img class="icon" src="../ChildsMango/whatsapp.png" alt="WhatsApp Icon">
-      <a href="https://wa.me/9944663300" target="_blank">+91 9944663300</a>
-    </p>
-    <p><strong>Email:</strong> 
-      <img class="icon" src="../ChildsMango/email.png" alt="Email Icon">
-      <a href="mailto:SAS@gmail.com">SAS@gmail.com</a>
-    </p>
-    <p><strong>Google Maps:</strong> 
-      <img class="icon" src="../ChildsMango/gmap.png" alt="Maps Icon">
-      <a href="https://g.co/kgs/6z6rf4B" target="_blank">Visit us on Google Maps</a>
-    </p>
-  </section>
+    <section>
+      <p><strong>Name:</strong> M. Suhasini</p>
+      <p><strong>Mother's Name:</strong> M/o. M.S.Nettra</p>
+      <p><strong>Farm:</strong> Senthil Aandavar Solai</p>
+      <p><strong>Location:</strong> Naduvur, Thanjavur, Tamilnadu, India</p>
+      <p><strong>Contact:</strong> 
+        <img class="icon" src="../ChildsMango/phone.png" alt="Phone Icon">
+        +91-9944663300 / 9626487391
+      </p>
+      <p><strong>WhatsApp:</strong>
+        <img class="icon" src="../ChildsMango/whatsapp.png" alt="WhatsApp Icon">
+        <a href="https://wa.me/9944663300" target="_blank">+91 9944663300</a>
+      </p>
+      <p><strong>Email:</strong> 
+        <img class="icon" src="../ChildsMango/email.png" alt="Email Icon">
+        <a href="mailto:SAS@gmail.com">SAS@gmail.com</a>
+      </p>
+      <p><strong>Google Maps:</strong> 
+        <img class="icon" src="../ChildsMango/gmap.png" alt="Maps Icon">
+        <a href="https://g.co/kgs/6z6rf4B" target="_blank">Visit us on Google Maps</a>
+      </p>
+    </section>
 
-  <!-- Back to Home Button -->
-  <div class="back-home-container">
+    <!-- Back to Home Button -->
     <a class="back-home" href="index.html">Back to Home</a>
-  </div>
 
-  <footer>&copy; 2025 ChildsMango. All Rights Reserved.</footer>
+    <footer>&copy; 2025 ChildsMango. All Rights Reserved.</footer>
+  </div>
 </body>
 </html>

@@ -4,13 +4,121 @@
   <meta charset="UTF-8">
   <title>Farming Practices - ChildsMango</title>
   <link rel="stylesheet" href="Estyle.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background-image: url('path/to/farming-background.jpg'); /* Optional background image */
+      background-size: cover;
+      background-position: center;
+      min-height: 100vh;
+      color: #333;
+    }
+
+    header {
+      background-color: rgba(31, 155, 75, 0.8); /* Semi-transparent green background */
+      color: white;
+      text-align: center;
+      padding: 20px;
+      font-size: 2.5em;
+      width: 100%;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Text shadow for readability */
+    }
+
+    section {
+      background-color: rgba(255, 255, 255, 0.9); /* Light background for content */
+      margin-top: 50px;
+      padding: 30px;
+      border-radius: 15px;
+      width: 80%;
+      max-width: 700px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+      animation: fadeIn 1.5s ease-out; /* Fade-in animation */
+      font-size: 1.2em;
+      line-height: 1.5;
+      text-align: justify;
+    }
+
+    section p {
+      margin: 20px 0;
+    }
+
+    section .icon {
+      width: 50px;
+      height: 50px;
+      margin-right: 15px;
+      transition: transform 0.3s ease;
+    }
+
+    section .icon:hover {
+      transform: scale(1.1); /* Slight zoom effect on hover */
+    }
+
+    footer {
+      margin-top: 50px;
+      text-align: center;
+      padding: 10px;
+      background-color: #1f9b4b;
+      color: white;
+      width: 100%;
+    }
+
+    /* Back to Home button styling */
+    .back-home {
+      text-decoration: none;
+      color: #fff;
+      font-weight: bold;
+      margin-top: 30px;
+      display: inline-block;
+      padding: 15px 25px;
+      border-radius: 5px;
+      background-color: #1f9b4b;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      transition: all 0.3s ease;
+      font-size: 1.2em;
+      margin-bottom: 30px;
+    }
+
+    .back-home:hover {
+      background-color: #5cb85c;
+      transform: scale(1.1); /* Slight zoom effect on hover */
+    }
+
+    @keyframes fadeIn {
+      0% { opacity: 0; }
+      100% { opacity: 1; }
+    }
+  </style>
 </head>
 <body>
-  <header>Farming Practices - ChildsMango</header>
+  <header>
+    <img src="../ChildsMango/Garden.jpeg" alt="Logo" style="width: 60px; height: auto; border-radius: 10%; border: 5px solid white;">
+    ChildsMango - Farming Practices
+  </header>
+
   <section>
-    <p>Our mangoes are nurtured without synthetic chemicals. Natural compost and traditional pest control techniques are used for safe, healthy fruits.</p>
-    <p>Our practices include composting, natural pest repellents, and intercropping to promote biodiversity.</p>
+    <p>
+      <img class="icon" src="../ChildsMango/comp.png" alt="Compost Icon">
+      Our mangoes are nurtured without synthetic chemicals. Natural compost and traditional pest control techniques are used for safe, healthy fruits.
+    </p>
+    <p>
+      <img class="icon" src="path/to/pest-control-icon.png" alt="Pest Control Icon">
+      Our practices include composting, natural pest repellents, and intercropping to promote biodiversity.
+    </p>
+    <p>
+      <img class="icon" src="path/to/intercropping-icon.png" alt="Intercropping Icon">
+      By using intercropping techniques, we create a harmonious environment for the mango trees and encourage the growth of other beneficial plants.
+    </p>
   </section>
-  <a href="index.html">Back to Home</a>
+
+  <!-- Back to Home Button -->
+  <a class="back-home" href="index.html">Back to Home</a>
+
+  <footer>&copy; 2025 ChildsMango. All Rights Reserved.</footer>
 </body>
 </html>

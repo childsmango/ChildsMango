@@ -15,6 +15,7 @@
       display: flex;
       flex-direction: column;
       align-items: center;
+      min-height: 100vh; /* Ensure the body takes at least full viewport height */
     }
     header {
       background-color: #1f9b4b;
@@ -80,10 +81,16 @@
     nav {
       text-align: center;
       margin-top: 20px;
+      padding: 10px;
+      background-color: #1f9b4b;  /* Make nav background match the theme */
+      width: 100%;
+      position: sticky;
+      top: 0;  /* Fix nav to top */
+      z-index: 1000; /* Ensure nav is above other content */
     }
     nav a {
       text-decoration: none;
-      color: #1f9b4b;
+      color: white;
       font-weight: bold;
       margin: 0 15px;
     }
@@ -104,6 +111,14 @@
     ChildsMango - Organic Mangoes
   </header>
 
+  <nav>
+    <a href="farming_practices.html">Farming Practices</a> |
+    <a href="contact.html">Contact</a> |
+    <a href="pay.html">Payment</a> |
+    <a href="feedback.html">Feedback</a> |
+    <a href="gallery.html">Gallery</a>
+  </nav>
+
   <div class="main-container">
     <div class="image-container">
       <img src="../ChildsMango/Title.jpg" alt="Farm">
@@ -117,14 +132,6 @@
       <p>Visit our farm and pick the mangoes you’d love to take home!</p>
     </section>
   </div>
-
-  <nav>
-    <a href="farming_practices.html">Farming Practices</a> |
-    <a href="contact.html">Contact</a> |
-    <a href="pay.html">Payment</a> |
-    <a href="feedback.html">Feedback</a> |
-    <a href="gallery.html">Gallery</a>
-  </nav>
 
   <footer>&copy; 2025 ChildsMango. All Rights Reserved.</footer>
 </body>

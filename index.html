@@ -27,7 +27,6 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      padding: 20px;
       position: relative; /* For logo positioning */
     }
     header img {
@@ -47,9 +46,10 @@
       width: 80%;
       margin-top: 20px;
       margin-bottom: 20px;
+      flex-direction: column;
     }
     .image-container {
-      width: 45%;   /* Image width reduced */
+      width: 100%;   /* Image width to 100% for responsiveness */
       margin-right: 20px;
     }
     .image-container img {
@@ -69,7 +69,9 @@
       padding: 20px;
       border-radius: 10px;
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-      width: 50%;   /* Ensuring text fits comfortably next to the image */
+      width: 100%;   /* Full width on mobile */
+      max-width: 700px;
+      text-align: center;
     }
     .description h3 {
       color: #1f9b4b;
@@ -113,6 +115,42 @@
       width: 100%;
       bottom: 0;
     }
+
+    /* Media Query for Mobile Devices */
+    @media (max-width: 768px) {
+      header {
+        font-size: 1.5em; /* Smaller header font size for mobile */
+      }
+
+      header img {
+        width: 50px; /* Smaller logo for mobile */
+        left: 10px;
+      }
+
+      .main-container {
+        flex-direction: column;
+        width: 90%;  /* Reduce width for mobile */
+        margin-top: 20px;
+      }
+
+      .image-container img {
+        width: 100%;
+      }
+
+      .description {
+        width: 100%;
+        padding: 15px;
+      }
+
+      nav {
+        font-size: 0.9em; /* Smaller font size for mobile */
+      }
+
+      footer {
+        font-size: 0.8em; /* Smaller footer text on mobile */
+      }
+    }
+
   </style>
 </head>
 <body>

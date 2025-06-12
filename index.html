@@ -1,8 +1,10 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Contact Us - ChildsMango</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ChildsMango - Home</title>
   <link rel="stylesheet" href="Estyle.css">
   <style>
     body {
@@ -13,13 +15,8 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      background-image: url('path/to/your/background-image.jpg'); /* Optional background image */
-      background-size: cover;
-      background-position: center;
-      min-height: 100vh;
-      color: #333;
+      min-height: 100vh; /* Ensure the body takes at least full viewport height */
     }
-
     header {
       background-color: #1f9b4b;
       color: white;
@@ -27,126 +24,124 @@
       padding: 20px 0;
       font-size: 2em;
       width: 100%;
-    }
-
-    section {
-      background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white background */
-      margin-top: 50px;
-      padding: 30px;
-      border-radius: 15px;
-      width: 80%;
-      max-width: 700px;
-      box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-      animation: fadeIn 1s ease-out; /* Fade-in animation */
-    }
-
-    section p {
-      font-size: 1.2em;
-      margin: 20px 0;
       display: flex;
+      justify-content: center;
       align-items: center;
+      padding: 20px;
+      position: relative; /* For logo positioning */
     }
-
-    section p strong {
-      margin-right: 10px;
-      color: #1f9b4b;
-      width: 120px; /* Make sure labels (Name, Farm, etc.) align */
+    header img {
+      width: 60px;  /* Logo size */
+      height: auto;
+      border-radius: 10%;
+      border: 5px solid #1f9b4b; /* Hexagonal border for logo */
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+      position: absolute;
+      left: 10px; /* Positioning logo to the left */
+      clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%); /* Hexagonal border */
     }
-
-    section p a {
-      color: #1f9b4b;
-      text-decoration: none;
-      transition: color 0.3s ease, transform 0.3s ease;
-      font-size: 1.1em;
+    .main-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 80%;
+      margin-top: 20px;
+      margin-bottom: 20px;
     }
-
-    section p a:hover {
-      color: #333;
-      transform: scale(1.05); /* Slight zoom effect on hover */
+    .image-container {
+      width: 45%;   /* Image width reduced */
+      margin-right: 20px;
     }
-
-    section p a:focus {
-      outline: none;
-      border-bottom: 2px solid #1f9b4b; /* Focus outline for accessibility */
-    }
-
-    /* Icons for each contact detail */
-    .icon {
-      margin-right: 15px;
-      width: 30px;
-      height: 30px;
+    .image-container img {
+      width: 100%;   /* Make the image width 100% of the container */
+      height: auto;  /* Maintain aspect ratio */
+      border-radius: 15px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+      border: 5px solid #1f9b4b;
       transition: transform 0.3s ease;
     }
-
-    .icon:hover {
-      transform: rotate(360deg); /* Rotate effect on hover */
+    .image-container img:hover {
+      transform: scale(1.1);  /* Zoom effect on hover */
     }
-
-    footer {
-      margin-top: 50px;
+    .description {
+      background-color: #eaf5e1;
+      margin: 0 20px;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      width: 50%;   /* Ensuring text fits comfortably next to the image */
+    }
+    .description h3 {
+      color: #1f9b4b;
+    }
+    .description p {
+      font-size: 1.1em;
+      color: #333;
+    }
+    nav {
       text-align: center;
+      margin-top: 20px;
       padding: 10px;
+      background-color: #1f9b4b;  /* Make nav background match the theme */
+      width: 100%;
+      position: sticky;
+      top: 0;  /* Fix nav to top */
+      z-index: 1000; /* Ensure nav is above other content */
+    }
+    nav a {
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+      margin: 0 15px;
+      padding: 10px;
+      border-radius: 5px;
+      transition: all 0.3s ease; /* Smooth transition for hover effects */
+    }
+    nav a:hover {
+      background-color: #5cb85c;  /* Lighter green background */
+      color: #fff;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);  /* Soft shadow effect */
+      transform: scale(1.1);  /* Slight zoom effect */
+      text-decoration: underline; /* Underline effect on hover */
+    }
+    footer {
       background-color: #1f9b4b;
       color: white;
+      text-align: center;
+      padding: 10px;
       position: fixed;
       width: 100%;
       bottom: 0;
     }
-
-    /* Back to Home link styling */
-    .back-home {
-      text-decoration: none;
-      color: #fff;
-      font-weight: bold;
-      margin-top: 20px;
-      display: inline-block;
-      padding: 15px 25px;
-      border-radius: 5px;
-      background-color: #1f9b4b;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-      transition: all 0.3s ease;
-      font-size: 1.2em;
-    }
-
-    .back-home:hover {
-      background-color: #5cb85c;
-      transform: scale(1.1); /* Slight zoom effect on hover */
-    }
-
-    @keyframes fadeIn {
-      0% { opacity: 0; }
-      100% { opacity: 1; }
-    }
   </style>
 </head>
 <body>
-  <header>Contact Us - ChildsMango</header>
+  <header>
+    <img src="../ChildsMango/Banganapale3.jpeg" alt="Logo">  <!-- Placeholder for logo -->
+    ChildsMango - Organic Mangoes
+  </header>
 
-  <section>
-    <p><strong>Name:</strong> M. Suhasini</p>
-    <p><strong>Mother's Name:</strong> M/o. M.S.Nettra</p>
-    <p><strong>Farm:</strong> Senthil Aandavar Solai</p>
-    <p><strong>Location:</strong> Naduvur, Thanjavur, Tamilnadu, India</p>
-    <p><strong>Contact:</strong> 
-      <img class="icon" src="path/to/phone-icon.png" alt="Phone Icon">
-      +91-9944663300 / 9626487391
-    </p>
-    <p><strong>WhatsApp:</strong> 
-      <img class="icon" src="path/to/whatsapp-icon.png" alt="WhatsApp Icon">
-      <a href="https://wa.me/9944663300" target="_blank">+91 9944663300</a>
-    </p>
-    <p><strong>Email:</strong> 
-      <img class="icon" src="path/to/email-icon.png" alt="Email Icon">
-      <a href="mailto:SAS@gmail.com">SAS@gmail.com</a>
-    </p>
-    <p><strong>Google Maps:</strong> 
-      <img class="icon" src="path/to/maps-icon.png" alt="Maps Icon">
-      <a href="https://g.co/kgs/6z6rf4B" target="_blank">Visit us on Google Maps</a>
-    </p>
-  </section>
+  <nav>
+    <a href="farming_practices.html">Farming Practices</a> |
+    <a href="contact.html">Contact</a> |
+    <a href="pay.html">Payment</a> |
+    <a href="feedback.html">Feedback</a> |
+    <a href="Gallery.html">Gallery</a>
+  </nav>
 
-  <!-- Centered Back to Home Button -->
-  <a class="back-home" href="index.html">Back to Home</a>
+  <div class="main-container">
+    <div class="image-container">
+      <img src="../ChildsMango/Title.jpg" alt="Farm">
+    </div>
+    <section class="description">
+      <h3>About Us</h3>
+      <p>We are dedicated to growing premium organic mangoes in Thanjavur, Tamil Nadu, using time-tested, nature-friendly methods that respect the soil and environment.</p>
+      <h3>Our Promise</h3>
+      <p>Each bite supports your health and the planet.</p>
+      <h3>Visit Us</h3>
+      <p>Visit our farm and pick the mangoes you’d love to take home!</p>
+    </section>
+  </div>
 
   <footer>&copy; 2025 ChildsMango. All Rights Reserved.</footer>
 </body>

@@ -43,10 +43,12 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      width: 80%;
+      width: 100%;
       margin-top: 20px;
       margin-bottom: 20px;
       flex-direction: column;
+      max-width: 1200px; /* Limit the width of content on larger screens */
+      padding: 10px;
     }
     .image-container {
       width: 100%;   /* Image width to 100% for responsiveness */
@@ -148,6 +150,13 @@
 
       footer {
         font-size: 0.8em; /* Smaller footer text on mobile */
+      }
+    }
+
+    /* Media Query for Desktop (Large Screens) */
+    @media (min-width: 1024px) {
+      .main-container {
+        width: 80%;  /* Adjust content width on large screens */
       }
     }
 

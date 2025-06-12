@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -28,6 +29,24 @@
       font-size: 2.5em;
       width: 100%;
       text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Text shadow for readability */
+      position: relative;
+    }
+
+    header img {
+      width: 60px;
+      height: auto;
+      border-radius: 10%;
+      border: 5px solid white; /* Light border for logo */
+      position: absolute;
+      left: 20px; /* Align logo to the left */
+      top: 50%;
+      transform: translateY(-50%); /* Vertically center the logo */
+      box-shadow: 0 0 20px rgba(31, 155, 75, 0.8); /* Light glow effect */
+      transition: box-shadow 0.3s ease-in-out; /* Smooth transition for glow effect */
+    }
+
+    header img:hover {
+      box-shadow: 0 0 30px rgba(31, 155, 75, 1); /* Stronger glow on hover */
     }
 
     section {
@@ -97,7 +116,7 @@
 </head>
 <body>
   <header>
-    <img src="../ChildsMango/Garden.jpeg" alt="Logo" style="width: 60px; height: auto; border-radius: 10%; border: 5px solid white;">
+    <img src="../ChildsMango/Garden.jpeg" alt="Logo">
     ChildsMango - Farming Practices
   </header>
 

@@ -4,14 +4,124 @@
   <meta charset="UTF-8">
   <title>Payment - ChildsMango</title>
   <link rel="stylesheet" href="Estyle.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background-image: url('path/to/your/background-image.jpg'); /* Optional background image */
+      background-size: cover;
+      background-position: center;
+      min-height: 100vh;
+      color: #333;
+    }
+
+    header {
+      background-color: #1f9b4b;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      font-size: 2em;
+      width: 100%;
+    }
+
+    section {
+      background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
+      margin-top: 50px;
+      padding: 30px;
+      border-radius: 15px;
+      width: 80%;
+      max-width: 700px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+      animation: fadeIn 1s ease-out; /* Fade-in animation */
+      font-size: 1.1em;
+      text-align: center;
+    }
+
+    section p {
+      margin: 20px 0;
+      font-size: 1.1em;
+    }
+
+    section img {
+      width: 150px;
+      height: 150px;
+      transition: transform 0.3s ease; /* Zoom effect */
+    }
+
+    section img:hover {
+      transform: scale(1.1); /* Slight zoom effect on hover */
+    }
+
+    .contact-info {
+      font-size: 1.1em;
+      margin-top: 20px;
+    }
+
+    .contact-info a {
+      text-decoration: none;
+      color: #1f9b4b;
+      font-weight: bold;
+      margin: 10px;
+    }
+
+    footer {
+      margin-top: 50px;
+      text-align: center;
+      padding: 10px;
+      background-color: #1f9b4b;
+      color: white;
+      width: 100%;
+    }
+
+    /* Back to Home button styling */
+    .back-home {
+      text-decoration: none;
+      color: #fff;
+      font-weight: bold;
+      margin-top: 20px;
+      display: inline-block;
+      padding: 15px 25px;
+      border-radius: 5px;
+      background-color: #1f9b4b;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      transition: all 0.3s ease;
+      font-size: 1.2em;
+      margin-bottom: 30px;
+    }
+
+    .back-home:hover {
+      background-color: #5cb85c;
+      transform: scale(1.1); /* Slight zoom effect on hover */
+    }
+
+    @keyframes fadeIn {
+      0% { opacity: 0; }
+      100% { opacity: 1; }
+    }
+
+  </style>
 </head>
 <body>
   <header>Payment - ChildsMango</header>
+
   <section>
     <p>Scan the QR code below to make an instant payment:</p>
-    <img src="qrcode.png" alt="QR Code for Payment" style="width:150px;height:150px;">
-    <p>Or use UPI ID: madhan@upi</p>
+    <img src="qrcode.png" alt="QR Code for Payment">
+    <p>Or use UPI ID: <strong>madhan444@oksbi</strong></p>
+
+    <div class="contact-info">
+      <p><strong>For Payment Receipts:</strong> Please send a screenshot of your payment to <a href="https://wa.me/9944663300" target="_blank">+91 9944663300</a> via WhatsApp.</p>
+    </div>
   </section>
-  <a href="index.html">Back to Home</a>
+
+  <!-- Back to Home Button -->
+  <a class="back-home" href="index.html">Back to Home</a>
+
+  <footer>&copy; 2025 ChildsMango. All Rights Reserved.</footer>
 </body>
 </html>

@@ -3,7 +3,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Feel free to Contact us - ChildsMango</title>
+  <title>Contact Us - ChildsMango</title>
   <link rel="stylesheet" href="Estyle.css">
   <style>
     body {
@@ -14,7 +14,7 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      justify-content: center;  /* Ensures vertical centering */
+      justify-content: center;  /* Vertically center content */
       background-image: url('path/to/your/background-image.jpg'); /* Optional background image */
       background-size: cover;
       background-position: center;
@@ -31,13 +31,21 @@
       width: 100%;
     }
 
+    .content-wrapper {
+      display: flex;
+      justify-content: center;  /* Horizontally center the content */
+      align-items: center;
+      width: 100%;
+      max-width: 800px;  /* Limiting width */
+      padding: 20px;
+    }
+
     section {
       background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white background */
       margin-top: 30px;
-      padding: 15px;
+      padding: 20px;
       border-radius: 10px;
-      width: 80%;
-      max-width: 700px;
+      width: 100%;
       box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
       animation: fadeIn 1s ease-out; /* Fade-in animation */
       font-size: 0.9em; /* Shrink font size */

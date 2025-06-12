@@ -1,8 +1,8 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contact Us - ChildsMango</title>
   <link rel="stylesheet" href="Estyle.css">
   <style>
@@ -130,6 +130,55 @@
       0% { opacity: 0; }
       100% { opacity: 1; }
     }
+
+    /* Mobile Styles - Media Queries */
+    @media (max-width: 768px) {
+      header {
+        font-size: 1.8em; /* Reduce header font size on mobile */
+      }
+
+      header img {
+        width: 50px; /* Smaller logo for mobile */
+        left: 10px; /* Adjust left alignment */
+      }
+
+      section {
+        width: 90%; /* Increase width to fit mobile screens */
+        padding: 20px;
+      }
+
+      section .icon {
+        width: 40px; /* Smaller icons for mobile */
+        height: 40px;
+      }
+
+      .back-home {
+        font-size: 1.1em; /* Slightly smaller back button text */
+        padding: 12px 20px; /* Adjust padding */
+      }
+
+      footer {
+        font-size: 0.9em; /* Smaller footer text */
+      }
+    }
+
+    /* Extra-small mobile - Very small screen adjustments */
+    @media (max-width: 480px) {
+      header {
+        font-size: 1.5em; /* Even smaller font size on very small screens */
+      }
+
+      section {
+        font-size: 1em; /* Reduce text size */
+        padding: 15px;
+      }
+
+      .back-home {
+        font-size: 1em; /* Adjust back button font for very small screens */
+        padding: 10px 20px; /* Reduce padding */
+      }
+    }
+
   </style>
 </head>
 <body>

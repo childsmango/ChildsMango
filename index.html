@@ -12,7 +12,14 @@
         .brand-green { background-color: #1f9b4b; color: white; }
         .brand-light-green { background-color: #eaf5e1; }
         .text-brand { color: #1f9b4b; }
-        .logo { width: 60px; height: 60px; border-radius: 50%; border: 3px solid white; }
+        .logo { 
+            width: 60px; 
+            height: 60px; 
+            border-radius: 50%; 
+            border: 3px solid white; 
+            object-fit: cover;
+            clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+        }
         .hero-section { 
             background: linear-gradient(rgba(31, 155, 75, 0.9), rgba(31, 155, 75, 0.8)), 
                         url('https://childsmango.github.io/ChildsMango/Title.jpg');
@@ -21,10 +28,25 @@
             color: white;
             padding: 100px 0;
         }
-        .mango-card { transition: transform 0.3s; border: none; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
-        .mango-card:hover { transform: translateY(-5px); }
-        .nav-link.active { font-weight: bold; color: #1f9b4b !important; }
-        .section-title { position: relative; margin-bottom: 2rem; }
+        .mango-card { 
+            transition: transform 0.3s; 
+            border: none; 
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            border: 3px solid #1f9b4b;
+        }
+        .mango-card:hover { 
+            transform: translateY(-5px); 
+            box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+        }
+        .nav-link.active { 
+            font-weight: bold; 
+            color: #1f9b4b !important; 
+            background-color: #5cb85c;
+        }
+        .section-title { 
+            position: relative; 
+            margin-bottom: 2rem; 
+        }
         .section-title:after {
             content: '';
             display: block;
@@ -33,15 +55,42 @@
             background: #1f9b4b;
             margin: 10px auto;
         }
-        .gallery-img { height: 200px; object-fit: cover; transition: transform 0.3s; }
-        .gallery-img:hover { transform: scale(1.05); }
+        .gallery-img { 
+            height: 200px; 
+            object-fit: cover; 
+            transition: transform 0.3s;
+            border-radius: 10px;
+            border: 3px solid #1f9b4b;
+        }
+        .gallery-img:hover { 
+            transform: scale(1.05); 
+        }
+        .payment-card {
+            transition: transform 0.3s;
+            border: 2px solid #eaf5e1;
+        }
+        .payment-card:hover {
+            transform: translateY(-5px);
+            border-color: #1f9b4b;
+        }
+        .feedback-item {
+            border-left: 4px solid #1f9b4b;
+            padding-left: 15px;
+        }
+        .farming-practice-item {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
     </style>
 </head>
 <body>
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark brand-green sticky-top">
         <div class="container">
-            <a class="navbar-brand d-flex align-items-center" href="#">
+            <a class="navbar-brand d-flex align-items-center" href="#home">
                 <img src="https://childsmango.github.io/ChildsMango/Banganapale3.jpeg" alt="ChildsMango Logo" class="logo me-2">
                 ChildsMango
             </a>
@@ -54,16 +103,22 @@
                         <a class="nav-link active" href="#home"><i class="fas fa-home me-1"></i> Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#about"><i class="fas fa-info-circle me-1"></i> About</a>
+                        <a class="nav-link" href="#farming"><i class="fas fa-seedling me-1"></i> Farming Practices</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#products"><i class="fas fa-apple-alt me-1"></i> Products</a>
+                        <a class="nav-link" href="#products"><i class="fas fa-apple-alt me-1"></i> Our Mangoes</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#gallery"><i class="fas fa-images me-1"></i> Gallery</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#contact"><i class="fas fa-envelope me-1"></i> Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#payment"><i class="fas fa-credit-card me-1"></i> Payment</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#feedback"><i class="fas fa-comment me-1"></i> Feedback</a>
                     </li>
                 </ul>
             </div>
@@ -85,7 +140,7 @@
             <h2 class="section-title text-center text-brand">About ChildsMango</h2>
             <div class="row align-items-center">
                 <div class="col-md-6">
-                    <img src="https://childsmango.github.io/ChildsMango/Title.jpg" alt="Our Farm" class="img-fluid rounded shadow">
+                    <img src="https://childsmango.github.io/ChildsMango/Title.jpg" alt="Our Farm" class="img-fluid rounded shadow" style="border: 5px solid #1f9b4b;">
                 </div>
                 <div class="col-md-6">
                     <div class="brand-light-green p-4 rounded">
@@ -103,43 +158,108 @@
         </div>
     </section>
 
+    <!-- Farming Practices Section -->
+    <section id="farming" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="section-title text-center text-brand">Our Farming Practices</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="farming-practice-item">
+                        <h4 class="text-brand"><i class="fas fa-leaf me-2"></i>Organic Farming</h4>
+                        <p>We use only natural methods for pest control and soil enrichment. No synthetic chemicals ever touch our mangoes.</p>
+                    </div>
+                    <div class="farming-practice-item">
+                        <h4 class="text-brand"><i class="fas fa-tint me-2"></i>Water Conservation</h4>
+                        <p>Our drip irrigation system ensures water is used efficiently, conserving this precious resource.</p>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="farming-practice-item">
+                        <h4 class="text-brand"><i class="fas fa-recycle me-2"></i>Sustainable Practices</h4>
+                        <p>We practice crop rotation and use organic compost to maintain soil health for future generations.</p>
+                    </div>
+                    <div class="farming-practice-item">
+                        <h4 class="text-brand"><i class="fas fa-bug me-2"></i>Natural Pest Control</h4>
+                        <p>We use neem-based solutions and beneficial insects to control pests naturally.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Products Section -->
-    <section id="products" class="py-5 bg-light">
+    <section id="products" class="py-5">
         <div class="container">
             <h2 class="section-title text-center text-brand">Our Mango Varieties</h2>
             <div class="row">
-                <!-- Mango Card 1 -->
+                <!-- Alphonso Mango -->
                 <div class="col-md-4 mb-4">
                     <div class="card mango-card h-100">
                         <img src="https://childsmango.github.io/ChildsMango/Banganapale3.jpeg" class="card-img-top" alt="Alphonso Mango" style="height: 250px; object-fit: cover;">
                         <div class="card-body">
                             <h5 class="card-title text-brand">Alphonso Mango</h5>
-                            <p class="card-text">Known as the king of mangoes, famous for its rich, creamy texture and sweet flavor.</p>
-                            <p class="text-muted"><small>Season: April - June</small></p>
+                            <p class="card-text">Known as the king of mangoes, famous for its rich, creamy texture and sweet flavor with saffron undertones.</p>
+                            <p class="text-muted"><small><i class="fas fa-calendar me-1"></i>Season: April - June</small></p>
                         </div>
                     </div>
                 </div>
                 
-                <!-- Mango Card 2 -->
+                <!-- Kesar Mango -->
                 <div class="col-md-4 mb-4">
                     <div class="card mango-card h-100">
                         <img src="https://childsmango.github.io/ChildsMango/Banganapale3.jpeg" class="card-img-top" alt="Kesar Mango" style="height: 250px; object-fit: cover;">
                         <div class="card-body">
                             <h5 class="card-title text-brand">Kesar Mango</h5>
-                            <p class="card-text">Saffron-colored flesh with a distinct aroma and sweet flavor. The queen of mangoes.</p>
-                            <p class="text-muted"><small>Season: May - July</small></p>
+                            <p class="card-text">Saffron-colored flesh with a distinct aroma and sweet flavor. Often called the queen of mangoes.</p>
+                            <p class="text-muted"><small><i class="fas fa-calendar me-1"></i>Season: May - July</small></p>
                         </div>
                     </div>
                 </div>
                 
-                <!-- Mango Card 3 -->
+                <!-- Banganapalle Mango -->
                 <div class="col-md-4 mb-4">
                     <div class="card mango-card h-100">
                         <img src="https://childsmango.github.io/ChildsMango/Banganapale3.jpeg" class="card-img-top" alt="Banganapalle Mango" style="height: 250px; object-fit: cover;">
                         <div class="card-body">
                             <h5 class="card-title text-brand">Banganapalle</h5>
-                            <p class="card-text">Large, oblong-shaped mango with thin skin and fiberless, sweet flesh.</p>
-                            <p class="text-muted"><small>Season: April - July</small></p>
+                            <p class="card-text">Large, oblong-shaped mango with thin skin and fiberless, sweet flesh. A popular export variety.</p>
+                            <p class="text-muted"><small><i class="fas fa-calendar me-1"></i>Season: April - July</small></p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Totapuri Mango -->
+                <div class="col-md-4 mb-4">
+                    <div class="card mango-card h-100">
+                        <img src="https://childsmango.github.io/ChildsMango/Banganapale3.jpeg" class="card-img-top" alt="Totapuri Mango" style="height: 250px; object-fit: cover;">
+                        <div class="card-body">
+                            <h5 class="card-title text-brand">Totapuri</h5>
+                            <p class="card-text">Distinct beak-shaped tip with tangy-sweet flavor. Excellent for making pickles and chutneys.</p>
+                            <p class="text-muted"><small><i class="fas fa-calendar me-1"></i>Season: June - August</small></p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Neelam Mango -->
+                <div class="col-md-4 mb-4">
+                    <div class="card mango-card h-100">
+                        <img src="https://childsmango.github.io/ChildsMango/Banganapale3.jpeg" class="card-img-top" alt="Neelam Mango" style="height: 250px; object-fit: cover;">
+                        <div class="card-body">
+                            <h5 class="card-title text-brand">Neelam</h5>
+                            <p class="card-text">Small to medium-sized with sweet, fiberless flesh. Known for its long shelf life.</p>
+                            <p class="text-muted"><small><i class="fas fa-calendar me-1"></i>Season: June - August</small></p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Dasheri Mango -->
+                <div class="col-md-4 mb-4">
+                    <div class="card mango-card h-100">
+                        <img src="https://childsmango.github.io/ChildsMango/Banganapale3.jpeg" class="card-img-top" alt="Dasheri Mango" style="height: 250px; object-fit: cover;">
+                        <div class="card-body">
+                            <h5 class="card-title text-brand">Dasheri</h5>
+                            <p class="card-text">Medium-sized with sweet, aromatic flesh and minimal fiber. A popular North Indian variety.</p>
+                            <p class="text-muted"><small><i class="fas fa-calendar me-1"></i>Season: June - July</small></p>
                         </div>
                     </div>
                 </div>
@@ -148,44 +268,62 @@
     </section>
 
     <!-- Gallery Section -->
-    <section id="gallery" class="py-5">
+    <section id="gallery" class="py-5 bg-light">
         <div class="container">
             <h2 class="section-title text-center text-brand">Our Gallery</h2>
             <div class="row">
                 <div class="col-md-3 mb-3">
-                    <img src="https://childsmango.github.io/ChildsMango/Title.jpg" class="gallery-img w-100 rounded" alt="Farm Image 1">
+                    <img src="https://childsmango.github.io/ChildsMango/Title.jpg" class="gallery-img w-100" alt="ChildsMango Farm">
                 </div>
                 <div class="col-md-3 mb-3">
-                    <img src="https://childsmango.github.io/ChildsMango/Banganapale3.jpeg" class="gallery-img w-100 rounded" alt="Farm Image 2">
+                    <img src="https://childsmango.github.io/ChildsMango/Banganapale3.jpeg" class="gallery-img w-100" alt="Banganapalle Mangoes">
                 </div>
                 <div class="col-md-3 mb-3">
-                    <img src="https://childsmango.github.io/ChildsMango/Banganapale3.jpeg" class="gallery-img w-100 rounded" alt="Farm Image 3">
+                    <img src="https://childsmango.github.io/ChildsMango/Banganapale3.jpeg" class="gallery-img w-100" alt="Organic Farming">
                 </div>
                 <div class="col-md-3 mb-3">
-                    <img src="https://childsmango.github.io/ChildsMango/Banganapale3.jpeg" class="gallery-img w-100 rounded" alt="Farm Image 4">
+                    <img src="https://childsmango.github.io/ChildsMango/Banganapale3.jpeg" class="gallery-img w-100" alt="Mango Harvest">
+                </div>
+                <div class="col-md-3 mb-3">
+                    <img src="https://childsmango.github.io/ChildsMango/Banganapale3.jpeg" class="gallery-img w-100" alt="Farm Fresh">
+                </div>
+                <div class="col-md-3 mb-3">
+                    <img src="https://childsmango.github.io/ChildsMango/Banganapale3.jpeg" class="gallery-img w-100" alt="Mango Orchard">
+                </div>
+                <div class="col-md-3 mb-3">
+                    <img src="https://childsmango.github.io/ChildsMango/Banganapale3.jpeg" class="gallery-img w-100" alt="Quality Check">
+                </div>
+                <div class="col-md-3 mb-3">
+                    <img src="https://childsmango.github.io/ChildsMango/Banganapale3.jpeg" class="gallery-img w-100" alt="Packaging">
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="py-5 brand-light-green">
+    <section id="contact" class="py-5">
         <div class="container">
             <h2 class="section-title text-center text-brand">Contact Us</h2>
             <div class="row">
                 <div class="col-md-6">
-                    <div class="bg-white p-4 rounded shadow">
+                    <div class="brand-light-green p-4 rounded shadow">
                         <h4 class="text-brand">Get In Touch</h4>
                         <p><i class="fas fa-phone text-brand me-2"></i> <strong>Phone:</strong> +91 XXXXX XXXXX</p>
                         <p><i class="fas fa-envelope text-brand me-2"></i> <strong>Email:</strong> info@childsmango.com</p>
                         <p><i class="fas fa-map-marker-alt text-brand me-2"></i> <strong>Address:</strong> Mango Orchard, Andhra Pradesh, India</p>
                         
                         <div class="mt-4">
+                            <h5 class="text-brand">Visit Our Farm</h5>
+                            <p>Come visit us and experience the freshness of our organic mango orchards. Pick your favorite mangoes straight from the trees!</p>
+                        </div>
+
+                        <div class="mt-4">
                             <h5 class="text-brand">Follow Us</h5>
                             <div class="d-flex gap-3">
                                 <a href="#" class="text-brand fs-4"><i class="fab fa-facebook"></i></a>
                                 <a href="#" class="text-brand fs-4"><i class="fab fa-instagram"></i></a>
                                 <a href="#" class="text-brand fs-4"><i class="fab fa-twitter"></i></a>
+                                <a href="#" class="text-brand fs-4"><i class="fab fa-youtube"></i></a>
                             </div>
                         </div>
                     </div>
@@ -193,20 +331,145 @@
                 <div class="col-md-6">
                     <div class="bg-white p-4 rounded shadow">
                         <h4 class="text-brand">Send Message</h4>
-                        <form>
+                        <form id="contactForm">
                             <div class="mb-3">
                                 <label class="form-label">Your Name</label>
-                                <input type="text" class="form-control" placeholder="Enter your name">
+                                <input type="text" class="form-control" placeholder="Enter your name" required>
                             </div>
                             <div class="mb-3">
                                 <label class="form-label">Email Address</label>
-                                <input type="email" class="form-control" placeholder="Enter your email">
+                                <input type="email" class="form-control" placeholder="Enter your email" required>
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">Phone Number</label>
+                                <input type="tel" class="form-control" placeholder="Enter your phone number">
                             </div>
                             <div class="mb-3">
                                 <label class="form-label">Message</label>
-                                <textarea class="form-control" rows="4" placeholder="Your message"></textarea>
+                                <textarea class="form-control" rows="4" placeholder="Your message" required></textarea>
                             </div>
-                            <button type="submit" class="btn brand-green text-white w-100">Send Message</button>
+                            <button type="submit" class="btn brand-green text-white w-100">
+                                <i class="fas fa-paper-plane me-2"></i>Send Message
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Payment Section -->
+    <section id="payment" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="section-title text-center text-brand">Payment Options</h2>
+            <div class="row">
+                <div class="col-md-3 mb-4">
+                    <div class="card payment-card text-center h-100">
+                        <div class="card-body">
+                            <i class="fas fa-credit-card fa-3x text-brand mb-3"></i>
+                            <h5 class="card-title">Credit/Debit Card</h5>
+                            <p class="card-text">Secure payment via encrypted transactions</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <div class="card payment-card text-center h-100">
+                        <div class="card-body">
+                            <i class="fas fa-university fa-3x text-brand mb-3"></i>
+                            <h5 class="card-title">Bank Transfer</h5>
+                            <p class="card-text">Direct transfer to our bank account</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <div class="card payment-card text-center h-100">
+                        <div class="card-body">
+                            <i class="fas fa-mobile-alt fa-3x text-brand mb-3"></i>
+                            <h5 class="card-title">UPI Payment</h5>
+                            <p class="card-text">Quick payment via UPI apps</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <div class="card payment-card text-center h-100">
+                        <div class="card-body">
+                            <i class="fas fa-money-bill-wave fa-3x text-brand mb-3"></i>
+                            <h5 class="card-title">Cash on Delivery</h5>
+                            <p class="card-text">Pay when you receive your order</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Feedback Section -->
+    <section id="feedback" class="py-5">
+        <div class="container">
+            <h2 class="section-title text-center text-brand">Customer Feedback</h2>
+            
+            <!-- Existing Feedback -->
+            <div class="row mb-5">
+                <div class="col-md-6 mb-3">
+                    <div class="feedback-item">
+                        <h5 class="text-brand">Rahul Sharma</h5>
+                        <div class="text-warning mb-2">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="fst-italic">"The Alphonso mangoes from ChildsMango are the best I've ever tasted! Sweet, juicy, and perfectly ripe."</p>
+                        <small class="text-muted">March 15, 2025</small>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <div class="feedback-item">
+                        <h5 class="text-brand">Priya Patel</h5>
+                        <div class="text-warning mb-2">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                        </div>
+                        <p class="fst-italic">"Great quality mangoes and excellent customer service. Will definitely order again next season!"</p>
+                        <small class="text-muted">March 10, 2025</small>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Feedback Form -->
+            <div class="row">
+                <div class="col-md-8 mx-auto">
+                    <div class="brand-light-green p-4 rounded shadow">
+                        <h4 class="text-brand text-center mb-4">Leave Your Feedback</h4>
+                        <form id="feedbackForm">
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label class="form-label">Your Name</label>
+                                    <input type="text" class="form-control" placeholder="Enter your name" required>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label class="form-label">Rating</label>
+                                    <select class="form-select" required>
+                                        <option value="">Select Rating</option>
+                                        <option value="5">★★★★★ Excellent</option>
+                                        <option value="4">★★★★ Very Good</option>
+                                        <option value="3">★★★ Good</option>
+                                        <option value="2">★★ Fair</option>
+                                        <option value="1">★ Poor</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">Your Feedback</label>
+                                <textarea class="form-control" rows="4" placeholder="Share your experience..." required></textarea>
+                            </div>
+                            <button type="submit" class="btn brand-green text-white w-100">
+                                <i class="fas fa-comment me-2"></i>Submit Feedback
+                            </button>
                         </form>
                     </div>
                 </div>
@@ -260,6 +523,19 @@
                     link.classList.add('active');
                 }
             });
+        });
+
+        // Form submission handlers
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for your message! We will get back to you soon.');
+            this.reset();
+        });
+
+        document.getElementById('feedbackForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for your feedback! We appreciate your input.');
+            this.reset();
         });
     </script>
 </body>
